@@ -1,0 +1,27 @@
+@startuml
+start
+
+:Login to Brightpath;
+
+if (Is Student Age 6-11?) then (yes)
+  :Access Gamified Lessons;
+  :Earn Points and Badges;
+  :Join Class Leaderboard;
+else(No(Age 12-15))
+  :Receive AI-Personalized Path;
+  :Complete Recommended Lessons;
+  :Earn Badges & Leaderboard Points;
+endif
+
+:Access VR Modules;
+if (Teacher Created VR Content Available?) then (yes)
+  :Engage in Custom VR Lesson;
+endif
+
+:Log Learning Progress;
+
+:Send Weekly Report to Parent;
+:Update Engagement Analytics;
+
+stop
+@enduml
