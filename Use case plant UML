@@ -1,0 +1,58 @@
+@startuml
+left to right direction
+
+actor Student as "Student (6–15)"
+actor Parent
+actor Teacher
+actor "School Admin" as SchoolAdmin
+actor "System Admin" as SysAdmin
+
+package "Brightpath System" {
+
+  usecase "Access Gamified Lessons" as UC1
+  usecase "Earn Points & Badges" as UC2
+  usecase "Join Class Leaderboard" as UC3
+  usecase "Access VR Modules" as UC4
+  usecase "Receive AI-Personalized Path" as UC5
+  usecase "View Weekly Progress" as UC6
+  usecase "Schedule Learning Events" as UC7
+  usecase "Message Teachers" as UC8
+  usecase "Create VR Lessons" as UC9
+  usecase "View Engagement Heatmaps" as UC10
+  usecase "Monitor System Health" as UC11
+  usecase "Manage Users & Roles" as UC12
+  usecase "Integrate School License" as UC13
+  usecase "Login to Platform" as UC0
+  usecase "Notify Parent" as UC14
+
+  ' Use case associations
+  UC1 --> UC2 : <<include>>
+  UC1 --> UC3 : <<include>>
+  UC4 --> UC9 : <<extend>>
+  UC5 --> UC14 : <<include>>
+  UC7 --> UC8 : <<extend>>
+
+  ' Actor associations
+  Student --> UC0
+  Student --> UC1
+  Student --> UC2
+  Student --> UC3
+  Student --> UC4
+  Student --> UC5
+
+  Parent --> UC0
+  Parent --> UC6
+  Parent --> UC7
+  Parent --> UC8
+
+  Teacher --> UC0
+  Teacher --> UC9
+  Teacher --> UC10
+  Teacher --> UC8
+
+  SchoolAdmin --> UC13
+
+  SysAdmin --> UC11
+  SysAdmin --> UC12
+}
+@enduml
