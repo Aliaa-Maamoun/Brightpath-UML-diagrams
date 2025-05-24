@@ -4,31 +4,31 @@ This project defines Brightpath a gamified e-learning platform addresssing a tra
 ---
 ## UML Diagrams Overview
  ## Class Diagram
--Illustrates the system architecture including:
+- Illustrates the system architecture including:
 
--Users (Students, Parents, Teachers, Admins) inheriting from a base User class
+- Users (Students, Parents, Teachers, Admins) inheriting from a base User class
 
--Core entities like Lesson, VRLesson, AILearningPath, and Gamification
+- Core entities like Lesson, VRLesson, AILearningPath, and Gamification
 
--Relationships between students and their progress, lessons, and achievements
+- Relationships between students and their progress, lessons, and achievements
 
 ---
 ## Use Case Diagram
--Shows how different users (students, parents, teachers, school admins, and system admins) interact with the platform. Use cases include accessing lessons, creating VR content, viewing reports, scheduling events, and managing users or system health.
+- Shows how different users (students, parents, teachers, school admins, and system admins) interact with the platform. Use cases include accessing lessons, creating VR content, viewing reports, scheduling events, and managing users or system health.
 
 ---
 
 ## Activity Diagram
--Describes the learning workflow from logging into the platform to logging progress and sending weekly reports. It outlines how younger students access gamified content, while older students receive personalized paths, both leading to VR lessons and progress tracking.
+- Describes the learning workflow from logging into the platform to logging progress and sending weekly reports. It outlines how younger students access gamified content, while older students receive personalized paths, both leading to VR lessons and progress tracking.
 
 
 ---
 
 ## Technologies Used:
 
--Draw.oi online plateform
+- Draw.oi online plateform
 
--PlantUML for diagram modeling
+- PlantUML for diagram modeling
 
 
 ---
@@ -36,12 +36,12 @@ This project defines Brightpath a gamified e-learning platform addresssing a tra
 
 To view the diagrams:
 
--Use the PlantUML plugin in editors like Visual Studio Code or IntelliJ
+- Use the PlantUML plugin in editors like Visual Studio Code or IntelliJ
 
--Paste .puml code into PlantUML Online Editor
+- Paste .puml code into PlantUML Online Editor
 
--Or use documentation generators like MkDocs + Kroki for live rendering
+- Or use documentation generators like MkDocs + Kroki for live rendering
 
 ---
-##Lisence
-MIT lisence
+## Lisence
+- MIT lisence
