@@ -1,0 +1,78 @@
+@startuml
+
+' Base class for all users
+class User {
+  +userID: String
+  +name: String
+  +email: String
+  +login(): void
+}
+
+class Student {
+  +gradeLevel: int
+  +progress: Progress
+  +earnBadge(): void
+  +joinLeaderboard(): void
+}
+
+class Parent {
+  +children: List<Student>
+  +viewReport(): void
+  +scheduleEvent(): void
+}
+
+class Teacher {
+  +createVRLesson(): void
+  +viewHeatmap(): void
+}
+
+class Admin {
+  +monitorSystem(): void
+  +manageUsers(): void
+}
+
+class Lesson {
+  +title: String
+  +subject: String
+  +content: String
+}
+
+class VRLesson {
+  +threeDContent: String
+  +interactive: Boolean
+  +collaborative: Boolean
+}
+
+class AILearningPath {
+  +generatePath(student: Student): List<Lesson>
+}
+
+class Gamification {
+  +points: int
+  +badges: List<String>
+  +leaderboardRank: int
+}
+
+class Progress {
+  +score: Float
+  +streakDays: int
+  +lastUpdated: Date
+}
+
+' Inheritance
+Student --|> User
+Parent --|> User
+Teacher --|> User
+Admin --|> User
+VRLesson --|> Lesson
+
+' Associations
+Student --> Lesson
+Student --> Gamification
+Student --> AILearningPath
+Student --> Progress
+Parent --> Student
+Teacher --> VRLesson
+Teacher --> Lesson
+
+@enduml
